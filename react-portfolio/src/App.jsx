@@ -1,7 +1,6 @@
 
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import './App.css'
-import portfolioContext from './main.jsx'
 
 const App = () => {
   return (
@@ -24,6 +23,7 @@ const Header = () => {
             <li ><a href="#profile">自己紹介</a></li>
             <li ><a href="#project">地域連携課題演習</a></li>
             <li ><a href="#vitalink">VitaLink</a></li>
+            <li ><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </>
@@ -34,27 +34,29 @@ const Profile = () => {
   return(
     <>
       <h2 id ="profile">自己紹介</h2>
-      <img src="/myphoto.jpg" alt="自分の画像"/>
-      <table border="1">
-        <tbody>
-        <tr>
-            <td>名前</td>
-            <td>税所樹磨</td>
-        </tr>
-        <tr>
-            <td>学籍番号</td>
-            <td>T223056</td>
-        </tr>
-        <tr>
-            <td>出身地</td>
-            <td>新潟県</td>
-        </tr>
-        <tr>
-            <td>趣味</td>
-            <td>登山、筋トレ、<a href="https://www.sus.ac.jp/topics/20250127-1/">献血</a></td>
-        </tr>
-        </tbody>
-        </table>
+      <div className='profile'>
+        <img src="/myphoto.jpg" alt="自分の画像"/>
+        <table border="0" className='grahp'>
+          <tbody>
+          <tr>
+              <td>名前</td>
+              <td>税所樹磨</td>
+          </tr>
+          <tr>
+              <td>学籍番号</td>
+              <td>T223056</td>
+          </tr>
+          <tr>
+              <td>出身地</td>
+              <td>新潟県</td>
+          </tr>
+          <tr>
+              <td>趣味</td>
+              <td>登山、筋トレ、<a href="https://www.sus.ac.jp/topics/20250127-1/">献血</a></td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
     </>
   );
 };
@@ -97,6 +99,7 @@ const ContactForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
+          <h2 id="contact">お問い合わせ</h2>
           <h3>名前</h3>
           <input 
           type="text" 
@@ -117,7 +120,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="メッセージを入力"></textarea>
-          <input type="submit" value="送信"/>
+          <p><input type="submit" value="送信"/></p>
      </form>
     </>
   );
