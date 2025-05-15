@@ -4,7 +4,8 @@ import './index.css'
 import App from './App.jsx'
 
 const portfolio = {
-  name: "saisho",
+  neme:"税所樹磨",
+  studentId:"T223056",
 };
 
 const portfolioContext = createContext(portfolio);
