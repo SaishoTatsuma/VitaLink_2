@@ -128,10 +128,12 @@ const ContactForm = () => {
 const Footer = () =>{
   return(
     <>
-    <ul>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">X</a></li>      
-    </ul>
+    <div className='footer'>
+      <ul>
+          <li><a href="">Facebook</a></li>
+          <li><a href="">X</a></li>      
+      </ul>
+    </div>
     </>
   );
 };
