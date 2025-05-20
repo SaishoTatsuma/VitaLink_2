@@ -91,9 +91,7 @@ const ContactForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData.name);
-    console.log(formData.email);
-    console.log(formData.message);
+    console.log(formData);
   };
 
   return (
