@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+nav {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* 横方向中央 */
+  align-items: center;     /* 縦方向中央 */
+}
+
 ul {
   display: flex;
   gap: 1.5rem;  
