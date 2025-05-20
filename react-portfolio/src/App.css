@@ -67,4 +67,12 @@ table th, table td {
   font-weight: bold;
 }
 
+textarea {
+  width: 50%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical; /* ユーザーが高さだけ変更できるように */
+  box-sizing: border-box; /* padding込みでサイズ調整される */
+}
 

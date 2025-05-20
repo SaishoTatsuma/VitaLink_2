@@ -84,6 +84,8 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({...formData,[name]:value});
@@ -91,7 +93,26 @@ const ContactForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const { name, email, message } = formData;
+
+    if(!name.trim() || !email.trim() || !message.trim()){
+      alert("すべての項目を入力してください")
+      return;
+    }
+
     console.log(formData);
+
+    // 送信完了メッセージを表示
+    setIsSubmitted(true);
+
+    // フォームの内容をクリア
+    setFormData({ name: "", email: "", message: "" });
+
+    // 数秒後にメッセージを非表示にする
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 3000); // 3秒後に非表示
   };
 
   return (
@@ -104,7 +125,7 @@ const ContactForm = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="名字 名前"/>
+          placeholder="諏訪  太郎"/>
           <h3>メールアドレス</h3>
           <input 
           type="email" 
@@ -120,6 +141,8 @@ const ContactForm = () => {
           placeholder="メッセージを入力"></textarea>
           <p><input type="submit" value="送信"/></p>
      </form>
+     {/* メッセージの表示（3秒限定） */}
+      {isSubmitted && <p style={{ color: "green" }}>送信完了しました！</p>}
     </>
   );
 };
