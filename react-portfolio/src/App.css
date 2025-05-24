@@ -1,23 +1,22 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 100%; /* 最大幅1280px */
+  margin: 0 auto; /* 上下0，左右中央揃え */
+  padding: 0; /*  */
+  text-align: center; /* テキストを中央寄せ */
 }
 
 nav {
-  margin: 0;
-  display: flex;
-  justify-content: center; /* 横方向中央 */
-  align-items: center;     /* 縦方向中央 */
+  display: flex; /* フレックスボックスでナビゲーションバーを中央揃え */
+  justify-content: center; /* 水平方向中央揃え */
+  align-items: center;     /* 垂直方向中央揃え */
 }
 
 ul {
-  display: flex;
-  gap: 1.5rem;  
-  list-style: none;  
-  margin: 0;
-  padding: 0;
+  display: flex; /* リスト項目を横並び */
+  gap: 1.5rem;  /*項目の間隔*/
+  list-style: none;  /*箇条書きの・を非表示*/
+  margin: 0; /*初期余白リセット*/
+  padding: 0;/*初期余白リセット*/
 }
 
 a {
@@ -28,14 +27,16 @@ a {
 
 
 img {
-    height: 300px;
-    width: 400px;
+    height: 30%;
+    width: 40%;
 }
 
 .profile {
   display:flex;
+  justify-content: center; /* 水平方向中央揃え */
   align-items: center;
   gap:1rem;
+  background-color: #f9f9f9;
 }
 
 .text{
@@ -46,25 +47,36 @@ table th, table td {
   padding: 12px 16px;  
 }
 
+
+
+.vitalink,.project {
+  width: 100%;
+  margin: auto;
+}
+
 .footer {
   bottom: 0;
   width: 100%;
   text-align: center;
   padding: 1rem;
+  background-color: #f9f9f9;
 }
 
 .footer ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: inline-flex;
   gap: 1rem;
 }
 
 .footer a {
-  text-decoration: none;
-  color: #333;
   font-weight: bold;
+}
+
+.name,.email {
+  width: 30%;
+  height: 5%;
+  padding: 1%;
+  font-size: 16px;
 }
 
 textarea {
@@ -76,3 +88,69 @@ textarea {
   box-sizing: border-box; /* padding込みでサイズ調整される */
 }
 
+.Contact {
+  background-color: #F3F9FB;
+}
+
+.Header {
+  background-color: #F3F9FB;
+  margin: 0,auto;
+  padding: 0%;
+}
+
+.section1 {
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9; /* 任意：区切りが分かりやすくなる */
+  border-radius: 8%;         /* 任意：角丸にする */
+  width: 80%;
+}
+.section2 {
+  padding: 1rem;
+  margin: 3rem auto;
+  background-color: #f9f9f9; /* 任意：区切りが分かりやすくなる */
+  border-radius: 8%;         /* 任意：角丸にする */
+  width: 100%;
+}
+.section3 {
+  margin: 3rem auto; 
+  padding: 1rem;
+  background-color: #f9f9f9; /* 任意：区切りが分かりやすくなる */
+  border-radius: 8%;         /* 任意：角丸にする */
+  width: 100%;
+}
+
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+  }
+  
+  img {
+    width: 70%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .Article {
+    flex-direction: column;
+    gap: 1rem;
+  }  
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+
+
+  .name,.email {
+    width: 60%;
+  }
+  textarea {
+    width: 85%;
+  }
+
+}
