@@ -1,9 +1,9 @@
-
 import { useState } from 'react';
 import './App.css'
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Button from '@mui/material/Button';
 
 const App = () => {
   return (
@@ -58,7 +58,7 @@ const Profile = () => {
             </tr>
             <tr>
                 <td>趣味</td>
-                <td>登山、筋トレ、<a href="https://www.sus.ac.jp/topics/20250127-1/">献血</a></td>
+                <td>登山・筋トレ・<a href="https://www.sus.ac.jp/topics/20250127-1/">献血</a></td>
             </tr>
             </tbody>
             </table>
@@ -159,12 +159,11 @@ const ContactForm = () => {
           onChange={handleChange}
           placeholder="メッセージを入力"></textarea>
           <p>
-            <input type="submit" value="送信"/>
-            {/* <Button>ボタン</Button> */}
+            <Button type='submit' variant='outlined' color='default'>送信</Button>
           </p>
      </form>
      {/* メッセージの表示（3秒限定） */}
-      {isSubmitted && <p style={{ color: "green" }}>送信完了しました！</p>}
+      {isSubmitted && <p style={{ color: "red" }}>送信完了しました！</p>}
     </>
   );
 };
@@ -173,13 +172,13 @@ const ContactForm = () => {
 const Footer = () =>{
   return(
     <>
-    <div className='footer'>
-      <ul>
-          <li><a href=""><XIcon/></a></li>
-          <li><a href=""><YouTubeIcon/></a></li>
-          <li><a href=""><InstagramIcon/></a></li>        
-      </ul>
-    </div>
+      <div className='footer'>
+        <ul>
+            <li><a href=""><XIcon/></a></li>
+            <li><a href=""><YouTubeIcon/></a></li>
+            <li><a href=""><InstagramIcon/></a></li>        
+        </ul>
+      </div>
     </>
   );
 };

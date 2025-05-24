@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&display=swap');
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Lora, 'Noto Serif JP';
   line-height: 1.5;
   font-weight: 400;
 
@@ -24,7 +25,6 @@ a:hover {
 
 body {
   margin: 0;
-  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -34,8 +34,6 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  margin: 0;
-  padding: 1%;
 }
 
 button {

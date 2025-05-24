@@ -1,78 +1,84 @@
-#root {
-  max-width: 100%; /* 最大幅1280px */
-  margin: 0 auto; /* 上下0，左右中央揃え */
-  padding: 0; /*  */
-  text-align: center; /* テキストを中央寄せ */
+/* 共通設定 */
+html {
+  scroll-behavior: smooth;
 }
 
-nav {
-  display: flex; /* フレックスボックスでナビゲーションバーを中央揃え */
-  justify-content: center; /* 水平方向中央揃え */
-  align-items: center;     /* 垂直方向中央揃え */
+#root {
+  text-align: center;
+
 }
 
 ul {
-  display: flex; /* リスト項目を横並び */
-  gap: 1.5rem;  /*項目の間隔*/
-  list-style: none;  /*箇条書きの・を非表示*/
-  margin: 0; /*初期余白リセット*/
-  padding: 0;/*初期余白リセット*/
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  font-weight: 500;
+  color: #213547;
+}
+
+h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
 }
 
-
-img {
-    height: 30%;
-    width: 40%;
+/* ナビゲーション */
+nav {
+  display: flex;
+  justify-content: center; 
 }
 
+/* プロフィールセクション */
 .profile {
-  display:flex;
-  justify-content: center; /* 水平方向中央揃え */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   background-color: #f9f9f9;
 }
 
-.text{
+table th,
+table td {
+  padding: 10px 15px;
+}
+
+.text {
   flex: 1;
 }
 
-table th, table td {
-  padding: 12px 16px;  
+img {
+  height: 30%;
+  width: 40%;
 }
 
-
-
-.vitalink,.project {
-  width: 100%;
-  margin: auto;
+/* セクション共通スタイル */
+.section1,
+.section2,
+.section3 {
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 2rem;
+  width: 80%;
 }
 
+/* フッター */
 .footer {
-  bottom: 0;
-  width: 100%;
-  text-align: center;
   padding: 1rem;
   background-color: #f9f9f9;
 }
 
 .footer ul {
-  list-style: none;
   display: inline-flex;
-  gap: 1rem;
 }
 
-.footer a {
-  font-weight: bold;
-}
-
-.name,.email {
+/* フォーム関連 */
+.name,
+.email {
   width: 30%;
   height: 5%;
   padding: 1%;
@@ -84,41 +90,10 @@ textarea {
   height: 150px;
   padding: 10px;
   font-size: 16px;
-  resize: vertical; /* ユーザーが高さだけ変更できるように */
-  box-sizing: border-box; /* padding込みでサイズ調整される */
+  resize: vertical;
+  box-sizing: border-box;
 }
 
-.Contact {
-  background-color: #F3F9FB;
-}
-
-.Header {
-  background-color: #F3F9FB;
-  margin: 0,auto;
-  padding: 0%;
-}
-
-.section1 {
-  margin: 3rem auto;
-  padding: 1rem;
-  background-color: #f9f9f9; /* 任意：区切りが分かりやすくなる */
-  border-radius: 8%;         /* 任意：角丸にする */
-  width: 80%;
-}
-.section2 {
-  padding: 1rem;
-  margin: 3rem auto;
-  background-color: #f9f9f9; /* 任意：区切りが分かりやすくなる */
-  border-radius: 8%;         /* 任意：角丸にする */
-  width: 100%;
-}
-.section3 {
-  margin: 3rem auto; 
-  padding: 1rem;
-  background-color: #f9f9f9; /* 任意：区切りが分かりやすくなる */
-  border-radius: 8%;         /* 任意：角丸にする */
-  width: 100%;
-}
 
 
 /* レスポンシブ対応 */
@@ -126,7 +101,7 @@ textarea {
   .profile {
     flex-direction: column;
   }
-  
+
   img {
     width: 70%;
   }
@@ -139,18 +114,22 @@ textarea {
   .Article {
     flex-direction: column;
     gap: 1rem;
-  }  
-  
+  }
+
   h1 {
     font-size: 1.5rem;
   }
 
+  h2 {
+    font-size: 1.3rem;
+  }
 
-  .name,.email {
+  .name,
+  .email {
     width: 60%;
   }
+
   textarea {
     width: 85%;
   }
-
 }
